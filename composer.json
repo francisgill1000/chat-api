@@ -1,0 +1,19 @@
+{
+    "name": "francis/chat-api",
+    "description": "A Laravel package for creating a chat API",
+    "authors": [
+      {
+        "name": "Francis",
+        "email": "your-email@example.com"
+      }
+    ],
+    "autoload": {
+      "psr-4": {
+        "Francis\\ChatApi\\": "src/"
+      }
+    },
+    "require": {
+      "php": "^8.0",
+      "laravel/framework": "^10.0"
+    }
+  }
