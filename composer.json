@@ -1,19 +1,15 @@
 {
-    "name": "francisgill/chat-api-package",
-    "description": "A Laravel package for creating a chat API",
-    "authors": [
-      {
-        "name": "Francis Gill",
-        "email": "francisgill1000@gmail.com"
-      }
-    ],
-    "autoload": {
-      "psr-4": {
-        "Francis\\ChatApi\\": "src/"
-      }
-    },
-    "require": {
-      "php": "^8.0",
-      "laravel/framework": "^10.0"
+  "name": "francisgill/chat-api-package",
+  "description": "A Laravel package for creating a chat API",
+  "authors": [
+    {
+      "name": "Francis Gill",
+      "email": "francisgill1000@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Francis\\ChatApi\\": "src/"
     }
   }
+}
