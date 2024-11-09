@@ -1,10 +1,10 @@
 {
-    "name": "francis/chat-api",
+    "name": "francisgill/chat-api",
     "description": "A Laravel package for creating a chat API",
     "authors": [
       {
-        "name": "Francis",
-        "email": "your-email@example.com"
+        "name": "Francis Gill",
+        "email": "francisgill1000@gmail.com"
       }
     ],
     "autoload": {
