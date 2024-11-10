@@ -1,15 +1,19 @@
 {
   "name": "francisgill/chat-api-package",
-  "description": "A Laravel package for creating a chat API",
-  "authors": [
-    {
-      "name": "Francis Gill",
-      "email": "francisgill1000@gmail.com"
-    }
-  ],
+  "description": "A chat API package for Laravel applications.",
+  "type": "library",
   "autoload": {
-    "psr-4": {
-      "Francis\\ChatApi\\": "src/"
-    }
-  }
+      "psr-4": {
+          "Francis\\ChatApi\\": "src/"
+      }
+  },
+  "license": "MIT",
+  "authors": [
+      {
+          "name": "Francis Gill",
+          "email": "francisgill1000@gmail.com"
+      }
+  ],
+  "minimum-stability": "stable",
+  "prefer-stable": true
 }
