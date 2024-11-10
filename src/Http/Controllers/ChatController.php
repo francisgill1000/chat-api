@@ -8,10 +8,20 @@ use Francis\ChatApi\Models\Message;
 
 class ChatController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        // List all conversations
-        return Message::get();
+        $validated = $request->validate([
+            'sender_id' => 'required',
+            'receiver_id' => 'required',
+        ]);
+
+        return Message::where(function ($query) use ($validated) {
+            $query->where('sender_id', $validated['sender_id'])
+                ->where('receiver_id', $validated['receiver_id']);
+        })->orWhere(function ($query) use ($validated) {
+            $query->where('sender_id', $validated['receiver_id'])
+                ->where('receiver_id', $validated['sender_id']);
+        })->orderBy('created_at', 'asc')->get();
     }
 
     public function sendMessage(Request $request)
