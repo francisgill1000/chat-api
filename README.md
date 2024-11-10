@@ -6,4 +6,4 @@ Steps
 
 2. Add Service Provider in config/app => providers array
     Francis\ChatApi\ChatApiServiceProvider::class
-3. php artisan mgirate
+3. php artisan migrate
