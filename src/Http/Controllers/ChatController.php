@@ -12,15 +12,15 @@ class ChatController extends Controller
     {
         $validated = $request->validate([
             'sender_id' => 'required',
-            'receiver_id' => 'required',
+            'recipient_id' => 'required',
         ]);
 
         return Message::where(function ($query) use ($validated) {
             $query->where('sender_id', $validated['sender_id'])
-                ->where('receiver_id', $validated['receiver_id']);
+                ->where('recipient_id', $validated['recipient_id']);
         })->orWhere(function ($query) use ($validated) {
-            $query->where('sender_id', $validated['receiver_id'])
-                ->where('receiver_id', $validated['sender_id']);
+            $query->where('sender_id', $validated['recipient_id'])
+                ->where('recipient_id', $validated['sender_id']);
         })->orderBy('created_at', 'asc')->get();
     }
 
